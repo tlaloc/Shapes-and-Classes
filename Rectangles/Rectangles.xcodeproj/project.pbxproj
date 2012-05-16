@@ -10,6 +10,8 @@
 		128381681564316800D478EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 128381671564316800D478EB /* Foundation.framework */; };
 		1283816B1564316800D478EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1283816A1564316800D478EB /* main.m */; };
 		1283816F1564316800D478EB /* Rectangles.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1283816E1564316800D478EB /* Rectangles.1 */; };
+		1283817B156431F300D478EB /* Rectangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1283817A156431F300D478EB /* Rectangle.m */; };
+		1283817F156432D400D478EB /* XYPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 1283817E156432D400D478EB /* XYPoint.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,8 +31,12 @@
 		128381631564316800D478EB /* Rectangles */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Rectangles; sourceTree = BUILT_PRODUCTS_DIR; };
 		128381671564316800D478EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1283816A1564316800D478EB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1283816D1564316800D478EB /* Rectangles-Prefix.pch */ = {isa = PBXFileReference; path = "Rectangles-Prefix.pch"; sourceTree = "<group>"; };
+		1283816D1564316800D478EB /* Rectangles-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rectangles-Prefix.pch"; sourceTree = "<group>"; };
 		1283816E1564316800D478EB /* Rectangles.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Rectangles.1; sourceTree = "<group>"; };
+		12838179156431F300D478EB /* Rectangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rectangle.h; sourceTree = "<group>"; };
+		1283817A156431F300D478EB /* Rectangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rectangle.m; sourceTree = "<group>"; };
+		1283817D156432D400D478EB /* XYPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPoint.h; sourceTree = "<group>"; };
+		1283817E156432D400D478EB /* XYPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPoint.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,10 @@
 			isa = PBXGroup;
 			children = (
 				1283816A1564316800D478EB /* main.m */,
+				12838179156431F300D478EB /* Rectangle.h */,
+				1283817A156431F300D478EB /* Rectangle.m */,
+				1283817D156432D400D478EB /* XYPoint.h */,
+				1283817E156432D400D478EB /* XYPoint.m */,
 				1283816E1564316800D478EB /* Rectangles.1 */,
 				1283816C1564316800D478EB /* Supporting Files */,
 			);
@@ -139,6 +149,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1283816B1564316800D478EB /* main.m in Sources */,
+				1283817B156431F300D478EB /* Rectangle.m in Sources */,
+				1283817F156432D400D478EB /* XYPoint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +241,7 @@
 				128381741564316800D478EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
