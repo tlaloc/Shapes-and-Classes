@@ -8,19 +8,29 @@
 
 #import "Rectangle.h"
 #import "Square.h"
+#import "XYPoint.h"
 
 int main (int argc, char * argv[]) 
 {
 	@autoreleasepool {
 		Rectangle *myRect = [[Rectangle alloc] init];
+		XYPoint *myPoint = [[XYPoint alloc] init];
+		
+		[myPoint setX: 100 andY: 200];
+		
 		[myRect setWidth: 5 andHeight: 8];
-		NSLog (@"Rectangle: w = %i, h = %i", myRect.width, myRect.height); 
-		NSLog (@"Area = %i, Perimeter = %i", [myRect area], [myRect perimeter]);
+		myRect.origin = myPoint;
+		
+		NSLog (@"\nRectangle: w = %i, h = %i", myRect.width, myRect.height); 
+		
+		NSLog (@"\nOrigin at (%i, %i)", myRect.origin.x, myRect.origin.y);
+		
+		NSLog (@"\nArea = %i, Perimeter = %i", [myRect area], [myRect perimeter]);
 		
 		Square *mySquare = [[Square alloc] init];
 		[mySquare setSide: 5];
-		NSLog (@"Square s = %i", [mySquare side]);
-		NSLog (@"Area = %i, Perimeter = %i", [mySquare area], 
+		NSLog (@"\nSquare s = %i", [mySquare side]);
+		NSLog (@"\nArea = %i, Perimeter = %i", [mySquare area], 
 			   [mySquare perimeter]);
 	}
 	return 0; 
