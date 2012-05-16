@@ -12,6 +12,7 @@
 		1283816F1564316800D478EB /* Rectangles.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1283816E1564316800D478EB /* Rectangles.1 */; };
 		1283817B156431F300D478EB /* Rectangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1283817A156431F300D478EB /* Rectangle.m */; };
 		1283817F156432D400D478EB /* XYPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 1283817E156432D400D478EB /* XYPoint.m */; };
+		12838182156444A300D478EB /* Square.m in Sources */ = {isa = PBXBuildFile; fileRef = 12838181156444A300D478EB /* Square.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,8 @@
 		1283817A156431F300D478EB /* Rectangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rectangle.m; sourceTree = "<group>"; };
 		1283817D156432D400D478EB /* XYPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPoint.h; sourceTree = "<group>"; };
 		1283817E156432D400D478EB /* XYPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPoint.m; sourceTree = "<group>"; };
+		12838180156444A300D478EB /* Square.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Square.h; sourceTree = "<group>"; };
+		12838181156444A300D478EB /* Square.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Square.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				1283816A1564316800D478EB /* main.m */,
+				12838180156444A300D478EB /* Square.h */,
+				12838181156444A300D478EB /* Square.m */,
 				12838179156431F300D478EB /* Rectangle.h */,
 				1283817A156431F300D478EB /* Rectangle.m */,
 				1283817D156432D400D478EB /* XYPoint.h */,
@@ -151,6 +156,7 @@
 				1283816B1564316800D478EB /* main.m in Sources */,
 				1283817B156431F300D478EB /* Rectangle.m in Sources */,
 				1283817F156432D400D478EB /* XYPoint.m in Sources */,
+				12838182156444A300D478EB /* Square.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

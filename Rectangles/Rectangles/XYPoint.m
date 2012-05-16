@@ -8,11 +8,13 @@
 
 #import "XYPoint.h" 
 
-@implementation XYPoint @synthesize x, y;
+@implementation XYPoint 
 
--(void) setX: (int) xVal andY: (int) yVal 
+@synthesize x, y;
+
+-(void) setX: (int) xVal andY: (int) yVal
 {
 	x = xVal;
-	y = yVal; 
+	y = yVal;
 }
 @end

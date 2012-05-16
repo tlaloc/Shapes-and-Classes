@@ -6,15 +6,24 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "XYPoint.h"
+#import "Rectangle.h" 
+@implementation Rectangle
 
--(void) setOrigin: (XYPoint *) pt 
+@synthesize width, height;
+
+-(void) setWidth: (int) w andHeight: (int) h 
 {
-	origin = pt; 
+	width = w;
+	height = h; 
 }
 
--(XYPoint *) origin 
+-(int) area 
 {
-	return origin; 
+		return width * height; 
+}
+
+-(int) perimeter 
+{
+return (width + height) * 2; 
 }
 @end
