@@ -6,7 +6,11 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
+// Simple example to illustrate inheritance #import <Foundation/Foundation.h>
+
 #import <Foundation/Foundation.h>
+
+// ClassA declaration and definition
 
 @interface ClassA: NSObject 
 {
@@ -23,6 +27,8 @@
 }
 @end
 
+// Class B declaration and definition
+
 @interface ClassB: ClassA 
 -(void) printVar;
 @end
@@ -38,11 +44,12 @@ int main(int argc, const char * argv[])
 {
 
 	@autoreleasepool {
-	    
-	    // insert code here...
-	    NSLog(@"Hello, World!");
-	    
+		ClassB *b = [[ClassB alloc] init];
+		
+		[b initVar]; // will use inherited method		
+		[b printVar]; // reveal value of x; 
 	}
-    return 0;
+		
+		return 0;
 }
 
