@@ -16,5 +16,6 @@
 {
 	x = xVal;
 	y = yVal;
+	NSLog(@"yo yo yo dogs, setXandY indahowse");
 }
 @end
