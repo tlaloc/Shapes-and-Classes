@@ -18,6 +18,7 @@
 -(void) setWidth: (float) w andHeight: (float) h; 
 -(float) area;
 -(float) perimeter;
--(XYPoint *) origin;
 -(void) setOrigin: (XYPoint *) pt;
+-(XYPoint *) origin;
+-(void) translate: (XYPoint *) vector;
 @end

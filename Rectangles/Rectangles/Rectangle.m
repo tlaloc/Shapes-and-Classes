@@ -47,4 +47,10 @@
 {
 	return origin;
 }
+
+-(void) translate: (XYPoint *) vector
+{
+	origin.x += vector.x;
+	origin.y += vector.y;
+}
 @end

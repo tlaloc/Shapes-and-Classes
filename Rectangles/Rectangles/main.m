@@ -15,6 +15,31 @@ int main (int argc, char * argv[])
 	@autoreleasepool {
 		Rectangle *myRect = [[Rectangle alloc] init];
 		XYPoint *myPoint = [[XYPoint alloc] init];
+		
+		[myPoint setX: 2.5 andY: 20.3];
+
+		[myRect setWidth: 15.5 andHeight: 28.1];
+		myRect.origin = myPoint;
+		
+		NSLog (@"\nRectangle: w = %g, h = %g", myRect.width, myRect.height); 
+		
+		NSLog (@"\nOrigin at (%g, %g)", myRect.origin.x, myRect.origin.y);
+		
+		XYPoint *vector1 = [[XYPoint alloc] init];
+		[vector1 setX: 3.3 andY: -20.3];
+		[myRect translate: vector1];
+		NSLog (@"\nOrigin translated to: (%g, %g)", 
+			   myRect.origin.x, myRect.origin.y);
+	}
+	return 0; 
+}
+
+/*
+int main (int argc, char * argv[]) 
+{
+	@autoreleasepool {
+		Rectangle *myRect = [[Rectangle alloc] init];
+		XYPoint *myPoint = [[XYPoint alloc] init];
 		//		NSLog(@"1");
 		[myPoint setX: 2.5 andY: 20.3];
 		//		NSLog(@"2");
@@ -51,7 +76,6 @@ int main (int argc, char * argv[])
 	return 0; 
 }
 
-/*
 #import <Foundation/Foundation.h>
 
 @interface Rectangle: NSObject
