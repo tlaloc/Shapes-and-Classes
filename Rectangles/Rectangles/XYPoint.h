@@ -10,7 +10,7 @@
 
 @interface XYPoint: NSObject 
 
-@property int x, y;
+@property float x, y;
 
 -(void) setX: (float) xVal andY: (float) yVal; 
 @end

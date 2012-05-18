@@ -18,34 +18,35 @@ int main (int argc, char * argv[])
 		//		NSLog(@"1");
 		[myPoint setX: 2.5 andY: 20.3];
 		//		NSLog(@"2");
-		[myRect setWidth: 5.5 andHeight: 8.1];
+		[myRect setWidth: 15.5 andHeight: 28.1];
 		myRect.origin = myPoint;
 		
-		NSLog (@"\nRectangle: w = %f, h = %f", myRect.width, myRect.height); 
+		NSLog (@"\nRectangle: w = %g, h = %g", myRect.width, myRect.height); 
 		
-		NSLog (@"\nOrigin at (%d, %d)", myRect.origin.x, myRect.origin.y);
+		NSLog (@"\nOrigin at (%g, %g)", myRect.origin.x, myRect.origin.y);
 		
-		NSLog (@"\nArea = %f, Perimeter = %f", [myRect area], [myRect perimeter]);
+		NSLog (@"\nArea = %g, Perimeter = %g", 
+			   [myRect area], [myRect perimeter]);
 		
 		Square *mySquare = [[Square alloc] init];
-		[mySquare setSide: 5];
-		NSLog (@"\nSquare s = %f", [mySquare side]);
-		NSLog (@"\nArea = %f, Perimeter = %f", [mySquare area], 
+		[mySquare setSide: 5.6];
+		NSLog (@"\nSquare s = %g", [mySquare side]);
+		NSLog (@"\nArea = %g, Perimeter = %g", [mySquare area], 
 			   [mySquare perimeter]);
 		
-		[myPoint setX: 77 andY: 8];
-		NSLog (@"\nOrigin at (%d, %d)", myRect.origin.x, myRect.origin.y);
+		[myPoint setX: 77.8 andY: 88.1];
+		NSLog (@"\nOrigin at (%g, %g)", myRect.origin.x, myRect.origin.y);
 		
 		float q = myRect.origin.x;
 		float p = myRect.origin.y;
 		
 		XYPoint *theOrigin = [[XYPoint alloc] init];
 		[theOrigin setX: q andY: p];
-		NSLog (@"\ntheOrigin at (%d, %d)", theOrigin.x, theOrigin.y);
+		NSLog (@"\ntheOrigin at (%g, %g)", theOrigin.x, theOrigin.y);
 		theOrigin.x = 22.2;
 		theOrigin.y = 33.3;
-		NSLog (@"\nOrigin at (%d, %d)", myRect.origin.x, myRect.origin.y);
-		NSLog (@"\ntheOrigin at (%d, %d)", theOrigin.x, theOrigin.y);
+		NSLog (@"\nOrigin at (%g, %g)", myRect.origin.x, myRect.origin.y);
+		NSLog (@"\ntheOrigin at (%g, %g)", theOrigin.x, theOrigin.y);
 	}
 	return 0; 
 }
