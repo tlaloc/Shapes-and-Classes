@@ -1,25 +1,29 @@
 //
-//  Rectangle.h
+//  Circle.h
 //  Rectangles
 //
-//  Created by Not Sure on 5/16/12.
+//  Created by Not Sure on 5/18/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
 
 #import "GraphicObject.h"
+//#import <math.h>
 
 @class XYPoint;
 
-@interface Rectangle: GraphicObject 
+@interface Circle : GraphicObject
+{  
+    float radius;  
+} 
 
-@property float width, height;
+@property float radius;
 
--(void) setWidth: (float) w andHeight: (float) h; 
+-(void) setRadius: (float) r;
+//-(float) cirPoint: (XYPoint *) origin; 
 -(float) area;
--(float) perimeter;
+-(float) circumference;
 -(void) setOrigin: (XYPoint *) pt;
 -(XYPoint *) origin;
 -(void) translate: (XYPoint *) vector;
--(BOOL) containsPoint: (XYPoint *) aPoint;
 @end

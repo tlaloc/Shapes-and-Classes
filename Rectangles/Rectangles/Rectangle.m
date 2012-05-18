@@ -34,12 +34,10 @@
 
 -(void) setOrigin: (XYPoint *) pt
 {
-
 	if (! origin)
 		origin = [[XYPoint alloc] init];
 	origin.x = pt.x;
 	origin.y = pt.y;
-	
 	//	NSLog(@"hey guys, setOrigin is invoked");
 }
 
@@ -52,5 +50,14 @@
 {
 	origin.x += vector.x;
 	origin.y += vector.y;
+}
+
+-(BOOL) containsPoint: (XYPoint *) aPoint
+{
+	if (origin.x <= aPoint.x && aPoint.x <= origin.x + width
+		&& origin.y <= aPoint.y && aPoint.y <= origin.y + height)
+		return YES;
+	else 
+		return NO;
 }
 @end

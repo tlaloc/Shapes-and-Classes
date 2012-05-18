@@ -1,25 +1,24 @@
 //
-//  Rectangle.h
+//  Triangle.h
 //  Rectangles
 //
-//  Created by Not Sure on 5/16/12.
+//  Created by Not Sure on 5/18/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
-
 
 #import "GraphicObject.h"
 
 @class XYPoint;
 
-@interface Rectangle: GraphicObject 
+@interface Triangle : GraphicObject
 
-@property float width, height;
+@property float width, height; //, angle;
 
--(void) setWidth: (float) w andHeight: (float) h; 
+-(void) setWidth: (float) w andHeight: (float) h; // andAngle: (float) a; 
 -(float) area;
 -(float) perimeter;
 -(void) setOrigin: (XYPoint *) pt;
 -(XYPoint *) origin;
 -(void) translate: (XYPoint *) vector;
--(BOOL) containsPoint: (XYPoint *) aPoint;
 @end
+

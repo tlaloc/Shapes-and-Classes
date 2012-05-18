@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1222DA721566879700710DF1 /* GraphicObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1222DA711566879700710DF1 /* GraphicObject.m */; };
+		1222DA761566936300710DF1 /* Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1222DA751566936200710DF1 /* Circle.m */; };
+		1222DA791566C63E00710DF1 /* Triangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1222DA781566C63E00710DF1 /* Triangle.m */; };
 		128381681564316800D478EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 128381671564316800D478EB /* Foundation.framework */; };
 		1283816B1564316800D478EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1283816A1564316800D478EB /* main.m */; };
 		1283816F1564316800D478EB /* Rectangles.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1283816E1564316800D478EB /* Rectangles.1 */; };
@@ -29,6 +32,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1222DA701566879700710DF1 /* GraphicObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphicObject.h; sourceTree = "<group>"; };
+		1222DA711566879700710DF1 /* GraphicObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphicObject.m; sourceTree = "<group>"; };
+		1222DA741566936200710DF1 /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Circle.h; sourceTree = "<group>"; };
+		1222DA751566936200710DF1 /* Circle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Circle.m; sourceTree = "<group>"; };
+		1222DA771566C63E00710DF1 /* Triangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Triangle.h; sourceTree = "<group>"; };
+		1222DA781566C63E00710DF1 /* Triangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Triangle.m; sourceTree = "<group>"; };
 		128381631564316800D478EB /* Rectangles */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Rectangles; sourceTree = BUILT_PRODUCTS_DIR; };
 		128381671564316800D478EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1283816A1564316800D478EB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -87,6 +96,12 @@
 				12838181156444A300D478EB /* Square.m */,
 				12838179156431F300D478EB /* Rectangle.h */,
 				1283817A156431F300D478EB /* Rectangle.m */,
+				1222DA701566879700710DF1 /* GraphicObject.h */,
+				1222DA711566879700710DF1 /* GraphicObject.m */,
+				1222DA741566936200710DF1 /* Circle.h */,
+				1222DA771566C63E00710DF1 /* Triangle.h */,
+				1222DA781566C63E00710DF1 /* Triangle.m */,
+				1222DA751566936200710DF1 /* Circle.m */,
 				1283817D156432D400D478EB /* XYPoint.h */,
 				1283817E156432D400D478EB /* XYPoint.m */,
 				1283816E1564316800D478EB /* Rectangles.1 */,
@@ -157,6 +172,9 @@
 				1283817B156431F300D478EB /* Rectangle.m in Sources */,
 				1283817F156432D400D478EB /* XYPoint.m in Sources */,
 				12838182156444A300D478EB /* Square.m in Sources */,
+				1222DA721566879700710DF1 /* GraphicObject.m in Sources */,
+				1222DA761566936300710DF1 /* Circle.m in Sources */,
+				1222DA791566C63E00710DF1 /* Triangle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

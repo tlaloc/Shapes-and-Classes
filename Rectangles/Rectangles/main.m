@@ -9,27 +9,65 @@
 #import "Rectangle.h"
 #import "Square.h"
 #import "XYPoint.h"
+#import "Circle.h"
+#import "Triangle.h"
 
 int main (int argc, char * argv[]) 
 {
 	@autoreleasepool {
 		Rectangle *myRect = [[Rectangle alloc] init];
 		XYPoint *myPoint = [[XYPoint alloc] init];
+		Circle *myCir = [[Circle alloc] init];
+		Triangle *myTri = [[Triangle alloc] init];
 		
 		[myPoint setX: 2.5 andY: 20.3];
-
 		[myRect setWidth: 15.5 andHeight: 28.1];
 		myRect.origin = myPoint;
 		
+		[myPoint setX: 5.2 andY: 17.7];
+		[myCir setRadius: 5.5];
+		myCir.origin = myPoint;
+		
+		[myPoint setX: 7.6 andY: 14.4];
+		[myTri setWidth: 12.9 andHeight: 19.3];
+		myTri.origin = myPoint;
+		
 		NSLog (@"\nRectangle: w = %g, h = %g", myRect.width, myRect.height); 
+		NSLog (@"\n   Origin at (%g, %g)", myRect.origin.x, myRect.origin.y);
+		NSLog (@"\n   Area = %g, Perimeter = %g", [myRect area], [myRect perimeter]);
 		
-		NSLog (@"\nOrigin at (%g, %g)", myRect.origin.x, myRect.origin.y);
+		NSLog (@"\nCircle: r = %g", myCir.radius); 
+		NSLog (@"\n   Origin at (%g, %g)", myCir.origin.x, myCir.origin.y);
+		NSLog (@"\n   Area = %g, Circum = %g", [myCir area], [myCir circumference]);
 		
+		NSLog (@"\nTriangle: w = %g, h = %g", myTri.width, myTri.height); 
+		NSLog (@"\n   Origin at (%g, %g)", myTri.origin.x, myTri.origin.y);
+		NSLog (@"\n   Area = %g, Perimeter = %g", [myTri area], [myTri perimeter]);
+		
+		
+		//  Testing translation  //
 		XYPoint *vector1 = [[XYPoint alloc] init];
 		[vector1 setX: 3.3 andY: -20.3];
 		[myRect translate: vector1];
-		NSLog (@"\nOrigin translated to: (%g, %g)", 
+		NSLog (@"\nRect translated to: (%g, %g)", 
 			   myRect.origin.x, myRect.origin.y);
+		[myCir translate: vector1];
+		NSLog (@"\nCir translated to: (%g, %g)", 
+			   myCir.origin.x, myCir.origin.y);
+		[myTri translate: vector1];
+		NSLog (@"\nTri translated to: (%g, %g)", 
+			   myTri.origin.x, myTri.origin.y);
+		
+		//  Testing ContainsPoint //
+		XYPoint *testPoint = [[XYPoint alloc] init];
+		[testPoint setX: 8 andY: 22];
+		NSLog (@"Is (%g,%g) in?  %i", 
+			   testPoint.x,testPoint.y,[myRect containsPoint:testPoint]);
+
+		[testPoint setX: 5.8 + 15.6 andY: 0.1];
+		NSLog (@"Is (%g,%g) in?  %i", 
+			   testPoint.x,testPoint.y,[myRect containsPoint:testPoint]);
+		
 	}
 	return 0; 
 }
