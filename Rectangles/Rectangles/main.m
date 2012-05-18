@@ -15,37 +15,37 @@ int main (int argc, char * argv[])
 	@autoreleasepool {
 		Rectangle *myRect = [[Rectangle alloc] init];
 		XYPoint *myPoint = [[XYPoint alloc] init];
-		NSLog(@"1");
-		[myPoint setX: 0 andY: 0];
-		NSLog(@"2");
-		[myRect setWidth: 5 andHeight: 8];
+		//		NSLog(@"1");
+		[myPoint setX: 2.5 andY: 20.3];
+		//		NSLog(@"2");
+		[myRect setWidth: 5.5 andHeight: 8.1];
 		myRect.origin = myPoint;
 		
-		NSLog (@"\nRectangle: w = %i, h = %i", myRect.width, myRect.height); 
+		NSLog (@"\nRectangle: w = %f, h = %f", myRect.width, myRect.height); 
 		
-		NSLog (@"\nOrigin at (%i, %i)", myRect.origin.x, myRect.origin.y);
+		NSLog (@"\nOrigin at (%d, %d)", myRect.origin.x, myRect.origin.y);
 		
-		NSLog (@"\nArea = %i, Perimeter = %i", [myRect area], [myRect perimeter]);
-		/*
+		NSLog (@"\nArea = %f, Perimeter = %f", [myRect area], [myRect perimeter]);
+		
 		Square *mySquare = [[Square alloc] init];
 		[mySquare setSide: 5];
-		NSLog (@"\nSquare s = %i", [mySquare side]);
-		NSLog (@"\nArea = %i, Perimeter = %i", [mySquare area], 
+		NSLog (@"\nSquare s = %f", [mySquare side]);
+		NSLog (@"\nArea = %f, Perimeter = %f", [mySquare area], 
 			   [mySquare perimeter]);
-		*/
-		[myPoint setX: 77 andY: 8];
-		NSLog (@"\nOrigin at (%i, %i)", myRect.origin.x, myRect.origin.y);
 		
-		int q = myRect.origin.x;
-		int p = myRect.origin.y;
+		[myPoint setX: 77 andY: 8];
+		NSLog (@"\nOrigin at (%d, %d)", myRect.origin.x, myRect.origin.y);
+		
+		float q = myRect.origin.x;
+		float p = myRect.origin.y;
 		
 		XYPoint *theOrigin = [[XYPoint alloc] init];
 		[theOrigin setX: q andY: p];
-		NSLog (@"\ntheOrigin at (%i, %i)", theOrigin.x, theOrigin.y);
-		theOrigin.x = 222;
-		theOrigin.y = 333;
-		NSLog (@"\nOrigin at (%i, %i)", myRect.origin.x, myRect.origin.y);
-		NSLog (@"\ntheOrigin at (%i, %i)", theOrigin.x, theOrigin.y);
+		NSLog (@"\ntheOrigin at (%d, %d)", theOrigin.x, theOrigin.y);
+		theOrigin.x = 22.2;
+		theOrigin.y = 33.3;
+		NSLog (@"\nOrigin at (%d, %d)", myRect.origin.x, myRect.origin.y);
+		NSLog (@"\ntheOrigin at (%d, %d)", theOrigin.x, theOrigin.y);
 	}
 	return 0; 
 }

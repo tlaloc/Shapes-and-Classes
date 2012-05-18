@@ -12,10 +12,10 @@
 
 @synthesize x, y;
 
--(void) setX: (int) xVal andY: (int) yVal
+-(void) setX: (float) xVal andY: (float) yVal
 {
 	x = xVal;
 	y = yVal;
-	NSLog(@"yo yo yo dogs, setXandY indahowse");
+	//	NSLog(@"yo yo yo dogs, setXandY indahowse");
 }
 @end

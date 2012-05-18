@@ -16,18 +16,18 @@
 
 @synthesize width, height;
 
--(void) setWidth: (int) w andHeight: (int) h 
+-(void) setWidth: (float) w andHeight: (float) h 
 {
 	width = w;
 	height = h; 
 }
 
--(int) area 
+-(float) area 
 {
 	return width * height; 
 }
 
--(int) perimeter 
+-(float) perimeter 
 {
 	return (width + height) * 2; 
 }
@@ -40,7 +40,7 @@
 	origin.x = pt.x;
 	origin.y = pt.y;
 	
-	NSLog(@"hey guys, setOrigin is invoked");
+	//	NSLog(@"hey guys, setOrigin is invoked");
 }
 
 -(XYPoint *) origin
