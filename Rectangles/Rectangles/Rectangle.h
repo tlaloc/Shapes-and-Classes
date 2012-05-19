@@ -22,4 +22,5 @@
 -(XYPoint *) origin;
 -(void) translate: (XYPoint *) vector;
 -(BOOL) containsPoint: (XYPoint *) aPoint;
+-(Rectangle *) intersect: (Rectangle *) rect;
 @end

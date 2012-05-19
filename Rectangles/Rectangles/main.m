@@ -20,8 +20,8 @@ int main (int argc, char * argv[])
 		Circle *myCir = [[Circle alloc] init];
 		Triangle *myTri = [[Triangle alloc] init];
 		
-		[myPoint setX: 2.5 andY: 20.3];
-		[myRect setWidth: 15.5 andHeight: 28.1];
+		[myPoint setX: 10 andY: 10];
+		[myRect setWidth: 30 andHeight: 20];
 		myRect.origin = myPoint;
 		
 		[myPoint setX: 5.2 andY: 17.7];
@@ -46,6 +46,7 @@ int main (int argc, char * argv[])
 		
 		
 		//  Testing translation  //
+		/*
 		XYPoint *vector1 = [[XYPoint alloc] init];
 		[vector1 setX: 3.3 andY: -20.3];
 		[myRect translate: vector1];
@@ -57,6 +58,7 @@ int main (int argc, char * argv[])
 		[myTri translate: vector1];
 		NSLog (@"\nTri translated to: (%g, %g)", 
 			   myTri.origin.x, myTri.origin.y);
+		*/
 		
 		//  Testing ContainsPoint //
 		XYPoint *testPoint = [[XYPoint alloc] init];
@@ -68,117 +70,22 @@ int main (int argc, char * argv[])
 		NSLog (@"Is (%g,%g) in?  %i", 
 			   testPoint.x,testPoint.y,[myRect containsPoint:testPoint]);
 		
+		//  Testing intersect //
+		Rectangle *rect2 = [[Rectangle alloc] init];
+		[myPoint setX: 20 andY: 20];
+		[rect2 setWidth: 30 andHeight: 20];
+		rect2.origin = myPoint;		
+		
+		NSLog (@"\nmyRect: w = %g, h = %g", myRect.width, myRect.height); 
+		NSLog (@"\n   Origin at (%g, %g)", myRect.origin.x, myRect.origin.y);
+		
+		NSLog (@"\nrect2: w = %g, h = %g", rect2.width, rect2.height); 
+		NSLog (@"\n   Origin at (%g, %g)", rect2.origin.x, rect2.origin.y);
+		
+		Rectangle *miRect;
+		miRect = [myRect intersect: rect2];
+		NSLog (@"\niRect origin: (%g,%g)", miRect.origin.x, miRect.origin.y);
+		NSLog (@"\n    width: %g   height: %g",miRect.width, miRect.height);
 	}
 	return 0; 
 }
-
-/*
-int main (int argc, char * argv[]) 
-{
-	@autoreleasepool {
-		Rectangle *myRect = [[Rectangle alloc] init];
-		XYPoint *myPoint = [[XYPoint alloc] init];
-		//		NSLog(@"1");
-		[myPoint setX: 2.5 andY: 20.3];
-		//		NSLog(@"2");
-		[myRect setWidth: 15.5 andHeight: 28.1];
-		myRect.origin = myPoint;
-		
-		NSLog (@"\nRectangle: w = %g, h = %g", myRect.width, myRect.height); 
-		
-		NSLog (@"\nOrigin at (%g, %g)", myRect.origin.x, myRect.origin.y);
-		
-		NSLog (@"\nArea = %g, Perimeter = %g", 
-			   [myRect area], [myRect perimeter]);
-		
-		Square *mySquare = [[Square alloc] init];
-		[mySquare setSide: 5.6];
-		NSLog (@"\nSquare s = %g", [mySquare side]);
-		NSLog (@"\nArea = %g, Perimeter = %g", [mySquare area], 
-			   [mySquare perimeter]);
-		
-		[myPoint setX: 77.8 andY: 88.1];
-		NSLog (@"\nOrigin at (%g, %g)", myRect.origin.x, myRect.origin.y);
-		
-		float q = myRect.origin.x;
-		float p = myRect.origin.y;
-		
-		XYPoint *theOrigin = [[XYPoint alloc] init];
-		[theOrigin setX: q andY: p];
-		NSLog (@"\ntheOrigin at (%g, %g)", theOrigin.x, theOrigin.y);
-		theOrigin.x = 22.2;
-		theOrigin.y = 33.3;
-		NSLog (@"\nOrigin at (%g, %g)", myRect.origin.x, myRect.origin.y);
-		NSLog (@"\ntheOrigin at (%g, %g)", theOrigin.x, theOrigin.y);
-	}
-	return 0; 
-}
-
-#import <Foundation/Foundation.h>
-
-@interface Rectangle: NSObject
--(void) setWidth: (int) w; 
--(void) setHeight: (int) h; 
--(int) width;
--(int) height;
--(int) area;
--(int) perimeter;
-@end
-
-@implementation Rectangle
-{
-	int width; 
-	int height; 
-	int area; 
-	int perimeter;
-}
-
--(void) setWidth: (int) w
-{    
-    width = w;
-}
-
--(void) setHeight: (int) h
-{
-    height = h;
-}
-
--(int) width
-{
-	return width;
-}
-
--(int) height
-{
-	return height;
-}
-
--(int) area
-{
-    return area = width * height;
-}
-
--(int) perimeter
-{
-	return perimeter = 2*width + 2*height;
-}
-@end
-
-int main(int argc, const char * argv[])
-{
-	
-    @autoreleasepool {
-		Rectangle *aRect = [[Rectangle alloc] init];        
-        [aRect setWidth: 13];
-		[aRect setHeight:1];
-		
-		
-        NSLog(@"\nHello, you have a rectangle:\nheight = %i", [aRect height]);
-        NSLog(@"\nwidth = %i", [aRect width]);
-        NSLog(@"\narea = %i", [aRect area]);		
-        NSLog(@"\nperimeter = %i", [aRect perimeter]);		
-    }
-    return 0;
-}
-*/
-

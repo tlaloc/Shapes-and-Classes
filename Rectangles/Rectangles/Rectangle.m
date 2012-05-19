@@ -60,4 +60,40 @@
 	else 
 		return NO;
 }
-@end
+
+-(Rectangle *) intersect: (Rectangle *) r
+{
+	Rectangle *iRect = [[Rectangle alloc] init];
+	XYPoint *iPoint = [[XYPoint alloc] init]; 
+	
+	float x1, x2, y1, y2;  
+	
+	// iRect corners
+	x1 = (origin.x >= r.origin.x ? origin.x : r.origin.x);
+	x2 = (origin.x+width <= r.origin.x+r.width? origin.x+width: r.origin.x+r.width);
+	y1 = (origin.y >= r.origin.y? origin.y: r.origin.y);
+	y2 = (origin.y+height <= r.origin.y+r.height? origin.y+height: r.origin.y+r.height);
+	
+	// checks for intersection  
+	if (x1 <= x2 && y1 <= y2) {
+		iRect.width = x2 - x1;  
+        iRect.height = y2 - y1;  
+        iPoint.x = x1;  
+        iPoint.y = y1;  
+	}
+	
+	// no intersection  
+	else {                     
+        iRect.width = 0;  
+        iRect.height = 0;  
+        iPoint.x = 0;  
+        iPoint.y = 0;  
+    }  
+    
+	iRect.origin = iPoint; 
+		
+	return iRect;
+}
+		
+		
+	@end
