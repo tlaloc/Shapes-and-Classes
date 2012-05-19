@@ -84,8 +84,10 @@ int main (int argc, char * argv[])
 		
 		Rectangle *miRect;
 		miRect = [myRect intersect: rect2];
-		NSLog (@"\niRect origin: (%g,%g)", miRect.origin.x, miRect.origin.y);
+		NSLog (@"\nmiRect origin: (%g,%g)", miRect.origin.x, miRect.origin.y);
 		NSLog (@"\n    width: %g   height: %g",miRect.width, miRect.height);
+	
+		[miRect draw];
 	}
 	return 0; 
 }
