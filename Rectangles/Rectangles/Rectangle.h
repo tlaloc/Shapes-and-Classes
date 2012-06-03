@@ -15,6 +15,8 @@
 
 @property float width, height;
 
+-(id) init;
+-(id) initWithWidth: (int) w andHeight: (int) h;
 -(void) setWidth: (float) w andHeight: (float) h; 
 -(float) area;
 -(float) perimeter;

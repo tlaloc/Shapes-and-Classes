@@ -18,4 +18,9 @@
 	y = yVal;
 	//	NSLog(@"yo yo yo dogs, setXandY indahowse");
 }
+
+-(void) print
+{
+	NSLog(@"\n(%g,%g)",x,y);
+}
 @end

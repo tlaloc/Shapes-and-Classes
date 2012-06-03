@@ -15,13 +15,14 @@
 int main (int argc, char * argv[]) 
 {
 	@autoreleasepool {
-		Rectangle *myRect = [[Rectangle alloc] init];
+		Rectangle *myRect = [[Rectangle alloc] initWithWidth: 30 andHeight: 20];
 		XYPoint *myPoint = [[XYPoint alloc] init];
 		Circle *myCir = [[Circle alloc] init];
 		Triangle *myTri = [[Triangle alloc] init];
+		Square *mySqr = [[Square alloc] initWithSide: 8.5];
 		
 		[myPoint setX: 10 andY: 10];
-		[myRect setWidth: 30 andHeight: 20];
+		//  [myRect setWidth: 30 andHeight: 20];
 		myRect.origin = myPoint;
 		
 		[myPoint setX: 5.2 andY: 17.7];
@@ -32,6 +33,9 @@ int main (int argc, char * argv[])
 		[myTri setWidth: 12.9 andHeight: 19.3];
 		myTri.origin = myPoint;
 		
+		
+		NSLog (@"\nSquare: w = %g", mySqr.side); 
+		NSLog (@"\nArea = %g, Perimeter = %g", [mySqr area], [mySqr perimeter]);  
 		NSLog (@"\nRectangle: w = %g, h = %g", myRect.width, myRect.height); 
 		NSLog (@"\n   Origin at (%g, %g)", myRect.origin.x, myRect.origin.y);
 		NSLog (@"\n   Area = %g, Perimeter = %g", [myRect area], [myRect perimeter]);

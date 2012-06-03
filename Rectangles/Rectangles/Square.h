@@ -10,6 +10,7 @@
 
 @interface Square: Rectangle
 
+-(id) initWithSide: (float) s;
 -(void) setSide: (float) s; 
 -(float) side;
 @end

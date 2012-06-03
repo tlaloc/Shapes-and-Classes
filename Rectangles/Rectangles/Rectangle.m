@@ -16,6 +16,23 @@
 
 @synthesize width, height;
 
+-(id) init   
+{  
+    self = [super init];   
+    if (self)  
+        [self setWidth: 1 andHeight: 1];  
+    return self;
+}
+
+-(id) initWithWidth: (int) w andHeight: (int) h
+{
+	self = [super init]; 
+	if (self) {
+		[self setWidth: w andHeight: h]; 
+	}
+		return self;
+}
+
 -(void) setWidth: (float) w andHeight: (float) h 
 {
 	width = w;

@@ -10,6 +10,14 @@
 
 @implementation Square: Rectangle
 
+-(id) initWithSide: (float) s
+{
+	self = [super init];
+	if (self)
+		[self setWidth: s andHeight: s];  
+	return self;
+}
+
 -(void) setSide: (float) s 
 {
 	[self setWidth: s andHeight: s]; 
