@@ -6,11 +6,24 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
+
+#import <Foundation/Foundation.h>
 #import "Rectangle.h" 
 
-@interface Square: Rectangle
+@interface Square: NSObject
 
--(id) initWithSide: (float) s;
--(void) setSide: (float) s; 
+-(Square *) initWithSide: (float) s;
+-(void) setSide: (float) s;
 -(float) side;
+-(float) area;
+-(float) perimeter;
 @end
+
+/*
+ Square: Rectangle
+ 
+ -(id) initWithSide: (float) s;
+ -(void) setSide: (float) s; 
+ -(float) side;
+ @end
+ */

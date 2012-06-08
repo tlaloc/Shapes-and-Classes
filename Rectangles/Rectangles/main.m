@@ -34,7 +34,7 @@ int main (int argc, char * argv[])
 		myTri.origin = myPoint;
 		
 		
-		NSLog (@"\nSquare: w = %g", mySqr.side); 
+		NSLog (@"\nSquare: s = %g", mySqr.side); 
 		NSLog (@"\nArea = %g, Perimeter = %g", [mySqr area], [mySqr perimeter]);  
 		NSLog (@"\nRectangle: w = %g, h = %g", myRect.width, myRect.height); 
 		NSLog (@"\n   Origin at (%g, %g)", myRect.origin.x, myRect.origin.y);
@@ -92,6 +92,15 @@ int main (int argc, char * argv[])
 		NSLog (@"\n    width: %g   height: %g",miRect.width, miRect.height);
 	
 		[miRect draw];
+		
+		NSLog(@"mySqr side: %g",[mySqr side]);
+		[mySqr setSide: 2.5];
+		NSLog(@"mySqr set to : %g",[mySqr side]);
+		NSLog(@"mySqr area: %g",[mySqr area]);
+		NSLog(@"mySqr peri: %g",[mySqr perimeter]);
+		
+		
+		
 	}
 	return 0; 
 }
