@@ -26,7 +26,7 @@ int main (int argc, char * argv[])
 		myRect.origin = myPoint;
 		
 		[myPoint setX: 5.2 andY: 17.7];
-		[myCir setRadius: 5.5];
+		[myCir setRadius: 1];
 		myCir.origin = myPoint;
 		
 		[myPoint setX: 7.6 andY: 14.4];

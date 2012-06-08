@@ -8,8 +8,6 @@
 
 #import "Circle.h"
 #import "XYPoint.h"
-//#import "Math.h"
-
 
 @implementation Circle
 {
@@ -20,12 +18,12 @@
 
 -(float) area
 {
-	return radius * radius * M_PI;
+	return 0.5 * TAU * radius * radius;
 }
 
 -(float) circumference
 {
-	return 2 * M_PI * radius;
+	return TAU * radius;
 }
 
 -(void) setOrigin: (XYPoint *) pt

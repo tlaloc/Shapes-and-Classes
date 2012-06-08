@@ -8,7 +8,7 @@
 
 
 #import "GraphicObject.h"
-//#import <math.h>
+#define TAU		2 * M_PI
 
 @class XYPoint;
 
